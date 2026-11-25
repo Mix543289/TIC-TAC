@@ -6,7 +6,7 @@
 /*   By: dcharbon <dcharbon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 01:25:35 by dcharbon          #+#    #+#             */
-/*   Updated: 2026/11/25 22:50:08 by dcharbon         ###   ########.fr       */
+/*   Updated: 2026/11/25 23:56:16 by dcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,6 @@ typedef struct s_app
 	int			initial_size;
 }	t_app;
 
+int		parse_arguments(t_app *app, int argc, char **argv);
 #endif
 
