@@ -3,19 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   choose_strategy.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lragot <lragot@student.42lehavre.fr>       +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 21:53:01 by lragot            #+#    #+#             */
-/*   Updated: 2026/11/24 21:56:09 by lragot           ###   ########.fr       */
+/*   Updated: 2026/11/25 05:28:55 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../include/push_swap.h"
 
-#include "push_swap.h"
-#include "ps_ops.h"
-#include "ps_sort.h"
-
-float dispatcher(stack a)
+float dispatcher(t_stack a)
 {
     float percent;
     percent = compute_disorder(a);

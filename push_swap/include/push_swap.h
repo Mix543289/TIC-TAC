@@ -3,19 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcharbon <dcharbon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 01:25:35 by dcharbon          #+#    #+#             */
-/*   Updated: 2026/11/25 04:47:10 by dcharbon         ###   ########.fr       */
+/*   Updated: 2026/11/25 19:38:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdlib.h>
 # include <unistd.h>
-# include "libft.h"
+# include <stdio.h>
+# include <stdarg.h>
+# include <stdlib.h>
+# include <stdint.h>
 
 typedef struct s_node
 {
@@ -31,6 +33,10 @@ typedef struct s_stack
 	t_node	*tail;
 	int		size;
 }	t_stack;
+
+# include "../libft/libft.h"
+# include "ps_sort.h"
+# include "ps_ops.h"
 
 typedef enum e_mode
 {

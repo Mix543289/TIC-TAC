@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   disorder.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lragot <lragot@student.42lehavre.fr>       +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 21:52:01 by lragot            #+#    #+#             */
-/*   Updated: 2026/11/24 21:52:43 by lragot           ###   ########.fr       */
+/*   Updated: 2026/11/25 05:28:51 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "push_swap.h"
-#include "ps_ops.h"
-#include "ps_sort.h"
+#include "../../include/push_swap.h"
 
-float compute_disorder(stack a)
+float compute_disorder(t_stack a)
 {
     int mistakes = 0;
     int total_pairs = 0;
