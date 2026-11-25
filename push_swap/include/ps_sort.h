@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ps_sort.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lragot <lragot@student.42lehavre.fr>       +#+  +:+       +#+        */
+/*   By: dcharbon <dcharbon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 21:54:27 by lragot            #+#    #+#             */
-/*   Updated: 2026/11/24 21:56:04 by lragot           ###   ########.fr       */
+/*   Updated: 2026/11/25 01:30:08 by dcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,4 @@
 float dispatcher(stack a);
 float compute_disorder(stack a);
 
-#endif /*PS_SORT_H*/
+#endif
