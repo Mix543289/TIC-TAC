@@ -3,21 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dcharbon <dcharbon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 01:25:35 by dcharbon          #+#    #+#             */
-/*   Updated: 2026/11/25 19:38:24 by marvin           ###   ########.fr       */
+/*   Updated: 2026/11/25 22:50:08 by dcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <unistd.h>
-# include <stdio.h>
-# include <stdarg.h>
-# include <stdlib.h>
-# include <stdint.h>
+# include "../libft/libft.h"
+# include "ps_struct.h"
+# include "ps_sort.h"
+# include "ps_ops.h"
 
 typedef struct s_node
 {
@@ -34,10 +33,6 @@ typedef struct s_stack
 	int		size;
 }	t_stack;
 
-# include "../libft/libft.h"
-# include "ps_sort.h"
-# include "ps_ops.h"
-
 typedef enum e_mode
 {
 	MODE_ADAPTIVE,
@@ -51,6 +46,23 @@ typedef struct s_options
 	t_mode	mode;
 	int		bench;
 }	t_options;
+
+typedef struct s_stats
+{
+	long	counts[11];
+	long	total;
+	double	disorder;
+	t_mode	used_mode;
+}	t_stats;
+
+typedef struct s_app
+{
+	t_stack		a;
+	t_stack		b;
+	t_options	options;
+	t_stats		stats;
+	int			initial_size;
+}	t_app;
 
 #endif
 
