@@ -6,7 +6,7 @@
 /*   By: dcharbon <dcharbon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 01:40:02 by dcharbon          #+#    #+#             */
-/*   Updated: 2026/11/26 22:43:44 by dcharbon         ###   ########.fr       */
+/*   Updated: 2026/11/27 00:40:10 by dcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ int	parse_int(const char *str, size_t len, int *out)
 		return (0);
 	while (i < len)
 	{
-		if ((str[i] < '0' || str[i] > '9') || \
-		(!parse_limits(&result, str[i] - '0', sign)))
+		if ((str[i] < '0' || str[i] > '9')
+			|| (!parse_limits(&result, str[i] - '0', sign)))
 			return (0);
 		i++;
 	}
