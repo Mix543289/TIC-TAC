@@ -6,7 +6,7 @@
 /*   By: dcharbon <dcharbon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 07:01:31 by dcharbon          #+#    #+#             */
-/*   Updated: 2026/11/26 22:58:15 by dcharbon         ###   ########.fr       */
+/*   Updated: 2026/11/27 00:34:18 by dcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 static int	parse_same(const char *a, const char *b)
 {
-	if (ft_strcmp(a, b) == 0)
+	if (ft_strncmp(a, b, ft_strlen(b) + 1) == 0)
 		return (1);
 	return (0);
 }
 
-static t_flag	parse_flag_type(const char *arg)
+t_flag	parse_flag_type(const char *arg)
 {
 	if (parse_same(arg, "--simple"))
 		return (FLAG_SIMPLE);
