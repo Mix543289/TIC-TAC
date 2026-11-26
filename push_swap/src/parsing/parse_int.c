@@ -6,7 +6,7 @@
 /*   By: dcharbon <dcharbon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 01:40:02 by dcharbon          #+#    #+#             */
-/*   Updated: 2026/11/26 22:38:06 by dcharbon         ###   ########.fr       */
+/*   Updated: 2026/11/26 22:43:44 by dcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,3 +52,6 @@ int	parse_int(const char *str, size_t len, int *out)
 	*out = (int)(result * sign);
 	return (1);
 }
+
+// Check et accumule un chiffre sans depasser les limites d'un int.
+// Convert une chaine de longueur len en int et retourne 1 si valide, 0 sinon.

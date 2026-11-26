@@ -6,7 +6,7 @@
 /*   By: dcharbon <dcharbon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 07:01:31 by dcharbon          #+#    #+#             */
-/*   Updated: 2026/11/26 22:38:10 by dcharbon         ###   ########.fr       */
+/*   Updated: 2026/11/26 22:58:15 by dcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,3 +77,8 @@ int	parse_options(t_app *app, int argc, char **argv)
 	}
 	return (1);
 }
+
+// Compare (strcmp) deux chaines et retourne 1 si identiques, 0 sinon.
+// ID une option par comparaison et retourne son flag, ou FLAG_NONE si inconnue.
+// save le mode de tri et refuse plusieurs modes via flag de check.
+// Lecture des arguments, save les options et refuse les flags invalides.
