@@ -6,7 +6,7 @@
 /*   By: lragot <lragot@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 22:58:11 by lragot            #+#    #+#             */
-/*   Updated: 2026/11/25 22:58:54 by lragot           ###   ########.fr       */
+/*   Updated: 2026/11/26 00:09:45 by lragot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ typedef struct s_stats
 	long	counts[11];
 	long	total;
 	double	disorder;
+	int		write;
 	t_mode	used_mode;
 }	t_stats;
 

@@ -27,25 +27,43 @@ static void revrotate(t_stack *stack)
     node->next = node_head;
     return ;
 }
-void rra(t_stack *a)
+void rra(t_stack *a,t_stats *stats)
 {
     if (!a || !a->tail || !a->tail->prev)
         return ;
     revrotate(a);
+    if (!stats)
+        return ;
+    if (stats->write == 0)
+        write(1, "rra\n", 4);
+    stats->counts[8]++;
+    stats->total++;
     return ;
 }
-void rrb(t_stack *b)
+void rrb(t_stack *b,t_stats *stats)
 {
     if (!b || !b->tail || !b->tail->prev)
         return ;
     revrotate(b);
+    if (!stats)
+        return ;
+    if (stats->write == 0)
+        write(1, "rrb\n", 4);
+    stats->counts[9]++;
+    stats->total++;
     return ;
 }
-void rrr(t_stack *a, t_stack *b)
+void rrr(t_stack *a, t_stack *b,t_stats *stats)
 {
     if (a && a->tail && a->tail->prev)
         revrotate(a);
     if (b && b->tail && b->tail->prev)
         revrotate(b);
+    if (!stats)
+        return ;
+    if (stats->write == 0)
+        write(1, "rrr\n", 4);
+    stats->counts[10]++;
+    stats->total++;
     return ;
 }
