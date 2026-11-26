@@ -32,25 +32,43 @@ static void swap(t_stack *x)
     x->head = second;
 }
 
-void	sa(t_stack *a)
+void	sa(t_stack *a,t_stats *stats)
 {
     if (!a || !a->head || !a->head->next)
         return ;
     swap(a);
-    return ;   
+    if (!stats)
+        return ;
+    if (stats->write == 0)
+        write(1, "sa\n", 3);
+    stats->counts[0]++;
+    stats->total++;
+    return ;
 }
-void	sb(t_stack *b)
+void	sb(t_stack *b,t_stats *stats)
 {
     if (!b || !b->head || !b->head->next)
         return ;
     swap(b);
-    return ;   
+    if (!stats)
+        return ;
+    if (stats->write == 0)
+        write(1, "sb\n", 3);
+    stats->counts[1]++;
+    stats->total++;
+    return ;
 }
-void	ss(t_stack *a, t_stack *b)
+void	ss(t_stack *a, t_stack *b,t_stats *stats)
 {
     if (a && a->head && a->head->next)
         swap(a);
     if (b && b->head && b->head->next)
         swap(b);
+    if (!stats)
+        return ;
+    if (stats->write == 0)
+        write(1, "ss\n", 3);
+    stats->counts[2]++;
+    stats->total++;
     return ;
 }
