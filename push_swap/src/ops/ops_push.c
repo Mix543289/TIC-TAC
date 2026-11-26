@@ -62,8 +62,7 @@ void    pa(t_stack *a, t_stack *b, t_stats *stats)
         return ;
     if (stats->write == 0)
         write(1, "pa\n", 3);
-    stats->counts[3]++;
-    stats->total++;
+    bench_add(stats, 3);
     return ;
 }
 void	pb(t_stack *a, t_stack *b, t_stats *stats)
@@ -73,7 +72,6 @@ void	pb(t_stack *a, t_stack *b, t_stats *stats)
         return ;
     if (stats->write == 0)
         write(1, "pb\n", 3);
-    stats->counts[4]++;
-    stats->total++;
+    bench_add(stats, 4);
     return ;
 }

@@ -36,8 +36,7 @@ void rra(t_stack *a,t_stats *stats)
         return ;
     if (stats->write == 0)
         write(1, "rra\n", 4);
-    stats->counts[8]++;
-    stats->total++;
+    bench_add(stats, 8);
     return ;
 }
 void rrb(t_stack *b,t_stats *stats)
@@ -49,8 +48,7 @@ void rrb(t_stack *b,t_stats *stats)
         return ;
     if (stats->write == 0)
         write(1, "rrb\n", 4);
-    stats->counts[9]++;
-    stats->total++;
+    bench_add(stats, 9);
     return ;
 }
 void rrr(t_stack *a, t_stack *b,t_stats *stats)
@@ -63,7 +61,6 @@ void rrr(t_stack *a, t_stack *b,t_stats *stats)
         return ;
     if (stats->write == 0)
         write(1, "rrr\n", 4);
-    stats->counts[10]++;
-    stats->total++;
+    bench_add(stats, 10);
     return ;
 }
