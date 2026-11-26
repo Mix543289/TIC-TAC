@@ -6,7 +6,7 @@
 /*   By: dcharbon <dcharbon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 22:56:19 by dcharbon          #+#    #+#             */
-/*   Updated: 2026/11/26 22:57:28 by dcharbon         ###   ########.fr       */
+/*   Updated: 2026/11/27 00:26:19 by dcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,5 @@ int	parse_search_multiple(const t_stack *stack, int value)
 	}
 	return (0);
 }
+
+// check des valeurs deja presentes.

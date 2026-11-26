@@ -6,7 +6,7 @@
 /*   By: dcharbon <dcharbon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 22:59:34 by dcharbon          #+#    #+#             */
-/*   Updated: 2026/11/26 23:09:31 by dcharbon         ###   ########.fr       */
+/*   Updated: 2026/11/27 00:26:19 by dcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,23 @@ static int	parse_is_space(char c)
 	return (c == ' ' || (c >= 9 && c <= 13));
 }
 
-// int	parse_next_token(const char *s, size_t *cursor,
-// 		const char **start, size_t *len)
-// {
-// 	size_t	i;
+int	parse_next_token(const char *s, size_t *cursor,
+		const char **start, size_t *len)
+{
+	size_t	i;
 
-// 	i = *cursor;
-// 	while (s[i] && parse_is_space(s[i]))
-// 		i++;
-// 	if (!s[i])
-// 		return (*cursor = i, 0);
-// 	*start = s + i;
-// 	while (s[i] && !parse_is_space(s[i]))
-// 		i++;
-// 	*len = (size_t)(s + i - *start);
-// 	*cursor = i;
-// 	return (1);
-// }
+	i = *cursor;
+	while (s[i] && parse_is_space(s[i]))
+		i++;
+	if (!s[i])
+		return (*cursor = i, 0);
+	*start = s + i;
+	while (s[i] && !parse_is_space(s[i]))
+		i++;
+	*len = (size_t)(s + i - *start);
+	*cursor = i;
+	return (1);
+}
 
 int	parse_scan_arg(t_app *app, const char *arg)
 {
@@ -54,3 +54,7 @@ int	parse_scan_arg(t_app *app, const char *arg)
 	}
 	return (checked);
 }
+
+// Check caracteres ignores.
+// 1 : token found. 0 : no more tokens.
+// Le token devient un int qui go a la FIN de la pile A.
