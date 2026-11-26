@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ps_struct.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lragot <lragot@student.42lehavre.fr>       +#+  +:+       +#+        */
+/*   By: dcharbon <dcharbon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 22:58:11 by lragot            #+#    #+#             */
-/*   Updated: 2026/11/26 00:09:45 by lragot           ###   ########.fr       */
+/*   Updated: 2026/11/26 22:17:29 by dcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,16 @@ typedef struct s_stack
 	t_node	*tail;
 	int		size;
 }	t_stack;
+
+typedef enum e_flag
+{
+	FLAG_NONE,
+	FLAG_SIMPLE,
+	FLAG_MEDIUM,
+	FLAG_COMPLEX,
+	FLAG_ADAPTIVE,
+	FLAG_BENCH
+}	t_flag;
 
 typedef enum e_mode
 {

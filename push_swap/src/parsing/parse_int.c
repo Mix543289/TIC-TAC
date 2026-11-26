@@ -6,13 +6,13 @@
 /*   By: dcharbon <dcharbon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 01:40:02 by dcharbon          #+#    #+#             */
-/*   Updated: 2026/11/26 04:39:27 by dcharbon         ###   ########.fr       */
+/*   Updated: 2026/11/26 22:38:06 by dcharbon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-int	parse_limits(long long *result, int digit, int sign)
+static int	parse_limits(long long *result, int digit, int sign)
 {
 	long long	limit;
 
